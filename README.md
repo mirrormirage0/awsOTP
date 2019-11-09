@@ -12,7 +12,7 @@ Automates all of the steps above in a single script. (Yup, no need to use the ph
 Using the pyOTP library, it gets your OTP, fetches a new set of AWS credentials, and optionally overwrites your current aws credentials file.
 
 # How to install
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 # How to run
 Edit awsOTP.py and configure your parameters. You will find this in the #configuration section.
@@ -22,7 +22,7 @@ Edit awsOTP.py and configure your parameters. You will find this in the #configu
 If all went well, you should be able to run one of your standard aws cli commands which makes use of your mfa profile.
 
 # Pre-requisites
-1) AWS CLI (command line interface is installed)
+1) Python3 + AWS CLI (command line interface is installed)
 2) aws credentials file & config file is already setup. This is usually found in ~/.aws/ folder on Linux machines.
 
 # Know issues.
@@ -30,3 +30,6 @@ Since the generated OTP is only valid for 60 seconds, in some cases it might be 
 
 # Potential security issue
 All config parameters are stored in plain text, including your MFA/2FA code. Do not use this script of a shared machine or servers.
+
+# Test coverage
+Tested on Ubuntu 18.04 LTS desktop
