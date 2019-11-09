@@ -12,7 +12,13 @@ Automates all of the steps above in a single script. (Yup, no need to use the ph
 Using the pyOTP library, it gets your OTP, fetches a new set of AWS credentials, and optionally overwrites your current aws credentials file.
 
 # How to install
-`pip install -r requirements.txt`
+##Easy 
+`pip3 install -r requirements.txt`
+
+##Ideal (Create a virtualenv and install)
+`python3 -m venv venv`
+`source venv\bin\activate`
+`pip3 install -r requirements.txt`
 
 # How to run
 Edit awsOTP.py and configure your parameters. You will find this in the #configuration section.
