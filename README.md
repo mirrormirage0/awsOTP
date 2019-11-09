@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 # How to run
 Edit awsOTP.py and configure your parameters. You will find this in the #configuration section.
-python3 awsOTP.py
+`python3 awsOTP.py`
 
 # Did it work?
 If all went well, you should be able to run one of your standard aws cli commands which makes use of your mfa profile.
