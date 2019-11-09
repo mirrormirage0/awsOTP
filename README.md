@@ -8,7 +8,7 @@ The manual way is
 
 # What this script does
 
-Automates all of the steps above in a single script. (Yup, no need to use the phone)
+Automates all of the steps above in a single script. (_Yes, no need to use the phone_)
 Using the pyOTP library, it gets your OTP, fetches a new set of AWS credentials, and optionally overwrites your current aws credentials file.
 
 # How to install
