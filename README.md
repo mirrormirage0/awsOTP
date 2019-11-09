@@ -18,6 +18,16 @@ Using the pyOTP library, it gets your OTP, fetches a new set of AWS credentials,
 Edit awsOTP.py and configure your parameters. You will find this in the #configuration section.
 `python3 awsOTP.py`
 
+##Note: The script runs in 2 steps
+Step 1) It tries to fetch the new AWS credentials. If you like, you can stop the script at this stage and manually copy paste the credentials to your file.
+Step 2) If you select "y" when prompted to overwrite, The script makes a backup of existing credentials file (.bak in existing folder) and overwrites the contents of the USERNAME_mfa config (The name of the tag is specified in the python file as AWSMFATag) 
+`
+[USERNAME_mfa]
+aws_access_key_id=###################
+aws_secret_access_key=###############
+aws_session_token=##################
+`
+
 # Did it work?
 If all went well, you should be able to run one of your standard aws cli commands which makes use of your mfa profile.
 
@@ -26,7 +36,8 @@ If all went well, you should be able to run one of your standard aws cli command
 2) aws credentials file & config file is already setup. This is usually found in ~/.aws/ folder on Linux machines.
 
 # Know issues.
-Since the generated OTP is only valid for 60 seconds, in some cases it might be expired too son. If you get an invalid MFA Token/ expired error, simply re-run the script, It will pick up the new OTP token and try to generate a new set of credentials.
+1) Since the generated OTP is only valid for 60 seconds, in some cases it might be expired too son. If you get an invalid MFA Token/ expired error, simply re-run the script, It will pick up the new OTP token and try to generate a new set of credentials.
+2) Only the last version of credentials file is backed up.
 
 # Potential security issue
 All config parameters are stored in plain text, including your MFA/2FA code. Do not use this script of a shared machine or servers.
