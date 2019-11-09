@@ -1,4 +1,5 @@
 #The Problem
+
 AWS CLI for MFA (Multi-factor authentication) enabled profiles relies of OTP which is only valid for 36 hours max.
 The manual way is 
 1) pick up the phone, open Google Authenticator, find out the token code
